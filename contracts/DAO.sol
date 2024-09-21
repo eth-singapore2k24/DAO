@@ -82,7 +82,6 @@ contract DecentralizedAdPlatform is ReentrancyGuard {
         uint256 _reputation
     ) public {
         require(bytes(_campaignURI).length > 0, "Campaign URI cannot be empty");
-        require(_startTime > block.timestamp, "Start time must be in the future");
         require(_endTime > _startTime, "End time must be after start time");
         require(_budget > 0, "Budget must be greater than zero");
 
